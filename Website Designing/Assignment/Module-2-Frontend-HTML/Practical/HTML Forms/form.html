@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>HTML Form</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+    <style>
+        body{
+            background-color: lightgray;
+            font-size: 30px;
+        }
+        fieldset{
+            margin: 50px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <form action="#">
+    <fieldset>
+        <legend>Registration Form</legend>
+        <label for="Fullname">Full Name : </label>
+        <input type="text" name="name" placeholder="Enter Your Full Name" required>
+        <br>
+        <label for="Email">Email : </label>
+        <input type="email" name="email" placeholder="Enter Your Email" pattern="" required>
+        <br>
+        <label for="phone">Phone No. : </label>
+        <input type="tel" name="phone" maxlength="10" minlength="10" required>
+        <br>
+        <label for="subject">Subject : </label>
+        <select name="subject">
+            <option>Computer Organization and Architecture</option>
+            <option>Object Oriented Programing</option>
+            <option>Data Science</option>
+            <option default>Web Development</option>
+            <option>Analysis and Development of Algorithm</option>
+        </select>
+        <br>
+        <label for="message">Message : </label><br>
+        <textarea name="message" cols="30" rows="10"></textarea>
+        <br>
+        <button type="submit">Submit</button>
+    </fieldset>
+    </form>
+</body>
+</html>

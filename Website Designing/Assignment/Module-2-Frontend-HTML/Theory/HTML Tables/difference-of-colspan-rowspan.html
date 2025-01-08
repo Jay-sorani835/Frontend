@@ -1,0 +1,61 @@
+<!-- 
+What is the Difference between 'colspan' and 'rowspan' in tables? Provide example.
+
+- 'colspan' is used to merge the columns.
+- 'rowspan' is used to merge the row.
+
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colspan and Rowsapn</title>
+</head>
+<body>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Heading 1</th>
+                <th>Heading 2</th>
+                <th>Heading 3</th>
+                <th>Heading 4</th>
+                <th>Heading 5</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td colspan="3">Data 1</td>
+                <td>Data 1</td>
+                <td>Data 1</td>
+            </tr>
+            <tr>
+                <td>Data 2</td>
+                <td>Data 2</td>
+                <td>Data 2</td>
+                <td>Data 2</td>
+                <td>Data 2</td>
+            </tr>
+            <tr>
+                <td rowspan="3">Data 3</td>
+                <td>Data 3</td>
+                <td>Data 3</td>
+                <td>Data 3</td>
+                <td>Data 3</td>
+            </tr>
+            <tr>
+                <td>Data 4</td>
+                <td>Data 4</td>
+                <td>Data 4</td>
+                <td>Data 4</td>
+            </tr>
+            <tr>
+                <td>Data 5</td>
+                <td>Data 5</td>
+                <td>Data 5</td>
+                <td>Data 5</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
