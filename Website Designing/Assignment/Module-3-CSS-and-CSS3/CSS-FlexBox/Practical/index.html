@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <title>Flexbox Layout</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        .header, .footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 15px;
+        }
+        .container {
+            display: flex;
+            flex: 1;
+            justify-content: space-between;
+            align-items: stretch;
+            padding: 10px;
+        }
+        .sidebar {
+            background: #555;
+            color: white;
+            width: 25%;
+            padding: 20px;
+            margin: 0;
+        }
+        .content {
+            background: #f4f4f4;
+            flex: 1;
+            padding: 20px;
+        }
+        .header{
+            display: flex;
+            justify-content: space-between;
+        }
+        .header a{
+            color: whitesmoke;
+            text-decoration: none;
+        }
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+            .sidebar {
+                width: 100%;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <a href="#">Home</a>
+        <a href="#">About US</a>
+        <a href="#">Contact Us</a>
+        <a href="#">Pages</a>
+        <i class="bi bi-person-fill"><a href="#"></a></i>
+    </div>
+    <div class="container">
+        <div class="sidebar"><iframe src="sidebar.html" frameborder="0"></iframe></div>
+        <div class="content">Main Content</div>
+    </div>
+    <div class="footer">Footer</div>
+</body>
+</html>

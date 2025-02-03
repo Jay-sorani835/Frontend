@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>HTML Form</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="form">
+      <form action="">
+        <label for="Fullname">Full Name : </label>
+        <input
+          type="text"
+          name="fullname"
+          id="fullname"
+          placeholder="Enter Your Full Name"
+        />
+        <br/>
+        <label for="Email">Email : </label>
+        <input
+          type="email"
+          name="email"
+          id="email"
+          placeholder="Enter Your Email"
+        />
+        <br/>
+        <label for="phone">Phone no. : </label>
+        <input
+          type="tel"
+          name="phone"
+          id="phone"
+          placeholder="Enter Your Phone Number"
+        />
+        <br/>
+        <label for="subject">Subject : </label>
+        <select name="subject">
+          <option value=""></option>
+          <option value="JAVA">JAVA</option>
+          <option value="PYTHON">PYTHON/option></option>
+          <option value="React">React</option>
+        </select>
+        <br/>
+        <label for="Address">Address</label>
+        <textarea name="address" cols="30" rows="10"></textarea>
+        <br/>
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+  </body>
+</html>

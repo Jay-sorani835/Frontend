@@ -1,0 +1,42 @@
+
+body{
+  margin: 0;
+  padding: 0;
+  background-image: linear-gradient(#8c0021,#fc8334,#fba073);
+
+}
+.form {
+  height: 400px;
+  width: 400px;
+  margin: 50px auto;
+  text-align: center;
+  border-radius: 20px;
+  background-image: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
+  border: 1px solid whitesmoke;
+  box-shadow: 5px 5px 10px 10px #f6d46571;
+}
+
+input{
+  margin: 10px;
+  padding: 5px;
+}
+
+select{
+  margin: 5px;
+  padding: 5px;
+}
+button{
+  margin-top: 10px;
+  width: 200px;
+  height: 35px;
+  color: crimson;
+  font-size: 20px;
+  font-weight: 300;
+  border-radius: 30px;
+  transition: all 300ms;
+}
+
+button:hover{
+  background-image: linear-gradient(120deg, rgb(78, 78, 241) 0%, rgb(226, 27, 60) 100%);
+  color: white;
+}
