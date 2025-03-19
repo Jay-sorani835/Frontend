@@ -1,5 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
+<<<<<<< HEAD
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <title>Flexbox Layout</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        font-family: Arial, sans-serif;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+      }
+      .pages {
+        margin: 2px auto;
+        display: flex;
+        justify-content: space-around;
+        gap: 10px;
+      }
+      .header,
+      .footer {
+        background: #333;
+        color: white;
+        text-align: center;
+        padding: 15px;
+      }
+      .container {
+        display: flex;
+        flex: 1;
+        justify-content: space-between;
+        align-items: stretch;
+        padding: 10px;
+      }
+      .sidebar {
+        background: #555;
+        color: white;
+        width: 25%;
+        padding: 20px;
+        margin: 0;
+      }
+      .content {
+        background: #f4f4f4;
+        flex: 1;
+        padding: 20px;
+      }
+      .header {
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+      }
+      .pages a {
+        color: whitesmoke;
+        text-decoration: none;
+        font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+      }
+      a::after {
+        content: "";
+        height: 2px;
+        width: 100%;
+        opacity: 0;
+        background-color: deepskyblue;
+
+        position: absolute;
+        left: 0px;
+        bottom: -10px;
+        transition: all 300ms;
+      }
+
+      a:hover::after {
+        opacity: 1;
+        bottom: -3px;
+      }
+      @media (max-width: 768px) {
+        .container {
+          flex-direction: column;
+        }
+        .sidebar {
+          width: 100%;
+          text-align: center;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <div class="pages">
+=======
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -63,10 +158,24 @@
 </head>
 <body>
     <div class="header">
+>>>>>>> 102056c43aad1686218413b8cf715b8396f69af1
         <a href="#">Home</a>
         <a href="#">About US</a>
         <a href="#">Contact Us</a>
         <a href="#">Pages</a>
+<<<<<<< HEAD
+      </div>
+      <a href="#"><i class="bi bi-person-fill"></i></a>
+    </div>
+    <div class="container">
+      <div class="sidebar">
+        <iframe src="sidebar.html" frameborder="0"></iframe>
+      </div>
+      <div class="content">Main Content</div>
+    </div>
+    <div class="footer">Footer</div>
+  </body>
+=======
         <i class="bi bi-person-fill"><a href="#"></a></i>
     </div>
     <div class="container">
@@ -75,4 +184,5 @@
     </div>
     <div class="footer">Footer</div>
 </body>
+>>>>>>> 102056c43aad1686218413b8cf715b8396f69af1
 </html>

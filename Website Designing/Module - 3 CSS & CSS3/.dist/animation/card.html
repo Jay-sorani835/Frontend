@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Card</title>
+    <style>
+        body{
+            background-color: gray;
+            display: flex;
+            gap: 10px;
+        }
+        .container{
+            margin: 50px auto;
+            width: 200px;
+            height: 320px;
+            padding: 5px;
+            background-color: whitesmoke;
+            border-radius: 10px;
+        }
+        .card{
+            width: 180px;
+            height: 300px;
+            margin: 5px;
+            padding: 5px;
+            border-radius: 10px;
+            background-color: lightgray;
+            
+            transition : ease-in 1s;
+        }
+        .card .img{
+            height: 30%;
+            border-radius: 7px;
+            padding: 0px 20px;
+            opacity: 0.2;
+            margin: 0px 10px;
+            background-color: transparent;
+
+            filter: drop-shadow(5px 5px 5px rgb(82, 82, 82));
+            transform: rotate(-360deg) scale(.8);
+            transition: all 1s;
+        }
+        .card h2{
+            margin: 15px 8px;
+            padding: 6px 9px;
+            display: inline-block;
+            border-radius: 5px;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            border: 2px solid rgba(224, 255, 255, 0.342);
+        }
+        .card p{
+            margin: 10px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            color: rgba(0, 0, 0, 0.849);
+            font-size: 15px;
+        }
+        .card .more{
+            color: blue;
+            height: auto;
+            width: 70%;
+            background-color: skyblue;
+            border-radius: 20px;
+            text-align: center;
+            padding: 7px;
+            font-weight: 600;
+            margin: 10px auto;
+
+            transition: ease-in 0.3s;
+        }
+        .card .more:hover{
+            background-color: lightgoldenrodyellow;
+            font-size: 18px;
+
+        }
+
+        .container:hover .img{
+            margin: 0px 3px;
+            transform: rotate(0deg) scale(1.1);
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="img">
+                <img src="./images/product-removebg-preview.png" alt="photo" width="100">
+            </div>
+            <div class="about">
+                <h2>Title</h2>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellendus, officiis.</p>
+            </div>        
+            <div class="more">
+                Read More
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="card">
+            <div class="img">
+                <img src="./images/product-removebg-preview.png" alt="photo" width="100">
+            </div>
+            <div class="about">
+                <h2>Title</h2>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellendus, officiis.</p>
+            </div>        
+            <div class="more">
+                Read More
+            </div>
+        </div>
+    </div><div class="container">
+        <div class="card">
+            <div class="img">
+                <img src="./images/product-removebg-preview.png" alt="photo" width="100">
+            </div>
+            <div class="about">
+                <h2>Title</h2>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellendus, officiis.</p>
+            </div>        
+            <div class="more">
+                Read More
+            </div>
+        </div>
+    </div>
+</body>
+</html>

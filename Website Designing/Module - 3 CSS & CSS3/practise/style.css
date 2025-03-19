@@ -1,0 +1,153 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+#header {
+  position: sticky;
+  padding: 2px;
+  height: auto;
+  display: flex;
+  width: 100%;
+  background-color: rgb(51, 57, 63);
+}
+#header .name {
+  height: auto;
+  padding: 5px;
+  width: 30%;
+  color: whitesmoke;
+  font-size: 22px;
+  letter-spacing: 2px;
+  margin-left: 5%;
+  animation: 2s fadeInRight alternate;
+}
+#header .name h1 {
+  animation: 5s fadeOut infinite;
+}
+#header .pages {
+  width: 70%;
+  display: flex;
+  gap: 10px;
+  justify-content: space-evenly;
+}
+a {
+  margin: auto;
+  color: rgba(255, 255, 255, 0.397);
+  text-decoration: none;
+  font-size: 40px;
+  transition: ease-in 100ms;
+}
+a:hover {
+  color: white;
+  font-size: 42px;
+}
+
+#slider {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  background-color: #18bc9c;
+  height: auto;
+}
+.about {
+  width: auto;
+  margin: 10px 0px;
+}
+.about h1 {
+  margin: 0;
+  text-align: center;
+  font-size: 50px;
+}
+img {
+  height: auto;
+  padding: 4%;
+}
+.about p {
+  width: auto;
+  text-align: center;
+}
+.about .line {
+  height: 5px;
+  width: 100%;
+  border-radius: 2px;
+  background-color: white;
+}
+#container {
+  width: 100%;
+  height: auto;
+}
+#container h1 {
+  margin: 0;
+  text-align: center;
+  font-size: 50px;
+  color: rgb(112, 112, 214);
+}
+#container .line {
+  height: 5px;
+  width: 30%;
+  margin: auto;
+  border-radius: 2px;
+  background-color: rgb(112, 112, 214);
+}
+
+#contact {
+  width: 50%;
+  height: auto;
+  margin: auto;
+}
+
+#contact .contact-form {
+  display: flex;
+  flex-direction: column;
+}
+#contact .contact-form h1 {
+  margin: 0;
+  text-align: center;
+  font-size: 50px;
+  color: rgb(112, 112, 214);
+}
+#contact .contact-form .line {
+  height: 5px;
+  width: 30%;
+  margin: auto;
+  border-radius: 2px;
+  background-color: rgb(112, 112, 214);
+}
+
+button[type="submit"] {
+  width: 150px;
+  background-color: rgb(15, 43, 136);
+  border-radius: 2px;
+  color: white;
+  font-weight: 200;
+  font-size: 18px;
+}
+button[type="reset"] {
+  width: 150px;
+  background-color: red;
+  border-radius: 2px;
+  color: white;
+  font-weight: 200;
+  font-size: 18px;
+}
+
+footer{
+    text-align: center;
+    height: 30px;
+    margin-top: 5px;
+    padding: 20px;
+    background-color: rgb(112, 112, 214);
+}
+.images{
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  width: 100%;  
+  flex-wrap: wrap;
+}
+#container  img{
+  height: auto;
+  width: 20%;
+  object-fit: c;
+}
