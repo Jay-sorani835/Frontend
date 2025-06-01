@@ -1,0 +1,90 @@
+<!-- 
+Create a JavaScript program using a switch statement to display the day of the week 
+based on the user input (e.g., 1 for Monday, 2 for Tuesday, etc.). 
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calaender</title>
+        <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+        integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7"
+        crossorigin="anonymous"
+        />
+        <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
+        crossorigin="anonymous"
+        ></script>
+    </head>
+    <body>
+        <form class="w-75 mx-auto mt-5">
+        <div class="form-group">
+            <label for="day">Day Of the Month : </label>
+            <input
+            type="number"
+            class="form-control"
+            id="day"
+            placeholder="Enter day"
+            />
+        </div>
+        <div class="form-group">
+            <label for="month">Month of the Year : </label>
+            <input
+            type="number"
+            class="form-control"
+            id="month"
+            placeholder="Enter month"
+            />
+        </div>
+        <div class="form-group">
+            <label for="month">Year : </label>
+            <input
+            type="number"
+            class="form-control"
+            id="year"
+            placeholder="Enter year"
+            />
+        </div>
+        <br>
+        <button type="submit" class="btn btn-primary w-50" style="margin: 0px 25%;" onclick="DayOfWeek()">
+            Submit
+        </button>
+        </form>
+    <script>
+      function DayOfWeek() {
+        var day = document.getElementById("day").value;
+        var month = document.getElementById("month").value;
+        var year = document.getElementById("year").value;
+        var date = new Date(year, month - 1, day);
+        var dayOfWeek = date.getDay();
+        switch (dayOfWeek) {
+          case 0:
+            alert("Sunday");
+            break;
+          case 1:
+            alert("Monday");
+            break;
+          case 2:
+            alert("Tuesday");
+            break;
+          case 3:
+            alert("Wednesday");
+            break;
+          case 4:
+            alert("Thursday");
+            break;
+          case 5:
+            alert("Friday");
+            break;
+          case 6:
+            alert("Saturday");
+            break;
+        }
+      }
+    </script>
+  </body>
+</html>

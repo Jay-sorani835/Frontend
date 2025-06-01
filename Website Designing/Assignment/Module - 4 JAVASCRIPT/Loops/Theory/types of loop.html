@@ -1,0 +1,65 @@
+<!-- 
+Explain the different types of loops in JavaScript (for, while, do-while). Provide a basic 
+example of each. 
+
+- In javascript there are only two types of loops are as follow : 
+1. Entry Control Loop
+2. Exit Control Loop
+
+1. Entry Control Loop : 
+- Entry Control loop are that loop in which the condition was checking at the entering in block or we can say that first condition will checked after the code will execute.
+- types of entry control loop :
+    - for loop : 
+        - for loop is used when the number of iteratiion is known. In for loop the initialization, condition, and increment of decrement was defined in one line in for(..this..).
+
+        syntax : 
+        for(initialization; condition; increment/decrement){
+            //statements
+        }
+
+        example : 
+        for(let i = 0;i < 5; i++){
+            console.log(i); // it will print 0 to 5 numbers like 0 1 2 3 4 
+        }
+        
+    - while loop :
+        - while loop is used when the number of iteration is not known.
+        
+        - syntax :
+        initialization
+        while(condition){
+            //statements
+            increment/decrement
+        }
+
+        example : 
+        let a = 0;
+        while(a != 5){
+            console.log(a);
+            a++;
+        }
+
+2. Exit Control Loop : 
+- Exit Control Loop are that loop in which the condition was checking at the end of the block or we can say that first block will execute after the conditon was checking.
+- types of exit control loop : 
+    - do while :
+        - do while loop is used when we don't know the error or iteration is not know. at that time the block of code is executed once.
+
+        -syntax :
+        initialization
+        do{
+        //statements
+        increment/decrement
+        }
+        while(condition);
+
+        example : 
+        let a = 5;
+        do{
+            console.log(a);
+            a++;
+        }
+        while(a <= 5)
+
+        - it will only print the 5 after that loop will closed or terminate because of condition is not being true.
+-->

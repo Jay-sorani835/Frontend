@@ -1,0 +1,20 @@
+<!-- 
+How does the addEventListener() method work in JavaScript? Provide an example.
+
+- The addEventListener() method attaches an event handler (a function) to a specified element for a particular event type.
+- It listens for a specific event (like "click", "keydown", etc.) on the element.
+- When the event happens, the attached function runs automatically.
+- You can add multiple listeners for the same event on the same element.
+- It does not overwrite existing event handlers (unlike setting onclick directly).
+
+syntax : 
+element.addEventListener(eventType, eventHandlerFunction, useCapture);
+
+example : 
+<button id="btn">CLick Me</button>
+
+<script>
+    document.getElementById("btn").addEventListener("click", ()=>{
+    alert("Button is Clicked");});
+</script>
+-->

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript</title>
+    <style>
+      h2 {
+        text-align: center;
+        margin: 50px auto;
+        background-color: darkblue;
+        color: whitesmoke;
+        font-size: 24px;
+      }
+    </style>
+  </head>
+  <body>
+    <h2 id="Welcome">Welcome to the JavaScript World! , &nbsp;<p id="para" style="display: inline-block;"></p></h2>
+    <script>
+      var name = prompt("Please enter your name:");
+      document.getElementById("para").innerHTML = name;
+    </script>
+  </body>
+</html>

@@ -1,0 +1,30 @@
+<!-- 
+Write a do-while loop that continues to ask the user for input until they enter a number greater than 10. 
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Do While Loop</title>
+</head>
+<body onload="getNumber()">    
+    <script>
+        function getNumber(){
+            var number = prompt("Please enter a number : ");
+            number = parseInt(number);
+            do{
+                if(number <= 10){
+                    alert("The number is less than or equal to 10. Please try again.");
+                    number = prompt("Please enter a number : ");
+                    number = parseInt(number);
+                }
+            }
+            while(number <= 10);
+            if(number > 10){
+                alert("You entered a number greater than 10: " + number);
+            }
+        }
+    </script>
+</body>
+</html>

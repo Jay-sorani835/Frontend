@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Analog + Digital Clock</title>
+  <style>
+    body {
+      margin: 0;
+      background: #0a0a0a;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    .clock {
+      width: 320px;
+      height: 320px;
+      border: 10px solid #00f0ff;
+      border-radius: 50%;
+      position: relative;
+      background: radial-gradient(circle, #222 60%, #111);
+      box-shadow: 0 0 25px #00f0ff;
+    }
+
+    .center {
+      width: 12px;
+      height: 12px;
+      background: #00f0ff;
+      border-radius: 50%;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 10;
+    }
+
+    .hand {
+      position: absolute;
+      bottom: 50%;
+      left: 50%;
+      transform-origin: bottom;
+      transform: translateX(-50%) rotate(90deg);
+      border-radius: 6px;
+    }
+
+    .hour {
+      width: 8px;
+      height: 70px;
+      background: #00f0ff;
+      z-index: 3;
+    }
+
+    .minute {
+      width: 5px;
+      height: 100px;
+      background: #00bfff;
+      z-index: 2;
+    }
+
+    .second {
+      width: 2px;
+      height: 120px;
+      background: #ff3b3b;
+      z-index: 1;
+    }
+
+    .number {
+      position: absolute;
+      width: 30px;
+      height: 30px;
+      text-align: center;
+      line-height: 30px;
+      color: #00f0ff;
+      font-size: 18px;
+      font-weight: bold;
+      transform: translate(-50%, -50%);
+    }
+
+    #digital {
+      margin-top: 30px;
+      font-size: 32px;
+      color: #00f0ff;
+      text-shadow: 0 0 10px #00f0ff;
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="clock">
+    <div class="center"></div>
+    <div class="hand hour" id="hour"></div>
+    <div class="hand minute" id="minute"></div>
+    <div class="hand second" id="second"></div>
+  </div>
+
+  <div id="digital">--:--:--</div>
+
+  <script>
+    // Create hour digits (1–12)
+    const clock = document.querySelector(".clock");
+    for (let i = 1; i <= 12; i++) {
+      const angle = (i * 30) * (Math.PI / 180);
+      const radius = 135;
+      const x = 160 + radius * Math.sin(angle);
+      const y = 160 - radius * Math.cos(angle);
+
+      const num = document.createElement("div");
+      num.className = "number";
+      num.style.left = `${x}px`;
+      num.style.top = `${y}px`;
+      num.textContent = i;
+      clock.appendChild(num);
+    }
+
+    function updateClocks() {
+      const now = new Date();
+      const second = now.getSeconds();
+      const minute = now.getMinutes();
+      const hour = now.getHours();
+
+      // Analog rotation
+      const secondDeg = second * 6;
+      const minuteDeg = minute * 6 + second * 0.1;
+      const hourDeg = (hour % 12) * 30 + minute * 0.5;
+
+      document.getElementById("second").style.transform = `translateX(-50%) rotate(${secondDeg}deg)`;
+      document.getElementById("minute").style.transform = `translateX(-50%) rotate(${minuteDeg}deg)`;
+      document.getElementById("hour").style.transform = `translateX(-50%) rotate(${hourDeg}deg)`;
+
+      // Digital clock
+      const pad = n => String(n).padStart(2, '0');
+      const ampm = hour >= 12 ? 'PM' : 'AM';
+      const hr12 = hour % 12 || 12;
+      const digitalTime = `${pad(hr12)}:${pad(minute)}:${pad(second)} ${ampm}`;
+      document.getElementById("digital").textContent = digitalTime;
+    }
+
+    updateClocks();
+    setInterval(updateClocks, 1000);
+  </script>
+
+</body>
+</html>
